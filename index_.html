@@ -1,0 +1,185 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Ezy Living - Home</title>
+<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="css/jquery.lightbox-0.5.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+<style type="text/css">
+@font-face {
+	font-family: menufont;
+	src: url('SecondaSoft-Medium.ttf') format('truetype'),
+	     url('secondasoft-medium-webfont.woff2')format('woff2'),
+	     url('secondasoft-medium-webfont.woff')format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+	background-color:#1a1a1a; margin:0px; padding:0px;
+	font-family:menufont, Arial, Helvetica, sans-serif;
+}
+img {border:0px;}
+#layout {width:988px; margin:0 auto;}
+#header {height:114px;width:988px;background-color:#2e2e2e; overflow:hidden; position:relative; }
+#logo_container {float:left;}
+#home_logo {float:right; margin:72px 20px 0px 0px}
+.mymenu {
+	width: 988px;
+	height: 47px;
+	background-color:#d41d24;
+}
+.mymenu ul { padding:0; margin:0; list-style-type:none; }
+.mymenu ul li { float:left; line-height:47px; padding:0px 20px; color:#FFF; font-family:menufont; font-size:18px; 
+   -webkit-transition: all 0.2s linear; 
+   -moz-transition: all 0.2s ease;
+   -ms-transition: all 0.2s ease;
+   -o-transition: all 0.2s ease;
+   transition: all 0.2s ease;
+}
+.mymenu ul li a { display:block; line-height:47px; color:#FFF; text-decoration:none; }
+.mymenu ul li a:hover { text-decoration:none;}
+.mymenu ul li:hover { background-color:#fc252d; }
+#menu_con {width: 988px;height:47px;background-color:#d41d24; font-size:18px; overflow:hidden;}
+#menu_con div {float:left;}
+#banner {position:relative; width:988px; height:268px; overflow:hidden;}
+#desc_block {width:988px; height:165px; background-color:#2e2e2e;}
+#home_desc {width:745px; height:165px;float:left;}
+#mypartner {width:240px; height:163px;float:left; border-left:2px #d41d24 solid; margin:1px 0px;}
+#kitchen_slider {width:988px;}
+#footer {width:988px; height:79px; background-color:#d41d24;color:#FFF;font-size:14px; margin-top:-8px; }
+#gallery { }
+#gallery ul { list-style: none; padding: 0px;  }
+#gallery ul li { display: inline-block; padding:4px 4px 0px 4px; height:150px;}
+#gallery ul li:hover { background-color:#FFF; }
+.phone {  position:absolute; top:50%; transform:translate(0,-50%); left: 500px; }
+.phone a { color:#e1e0e0; text-decoration:none; }
+.phone a:hover { color:#d41d24; }
+#myflash { background:url(images/partner_bg.jpg); height:108px; position:relative; }
+#myflash img { 
+	position:absolute; top:50%; left:50%; transform:translate(-50%, -50%);
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out;
+    opacity:0;
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+}
+#myflash img.opaque {
+  opacity:1;
+  -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  filter: alpha(opacity=1);
+}
+.tipinfo { background-color:transparent; position:fixed; top: 50%; transform:translate(0%,-50%); }
+.tipinfo a { display:block; }
+
+</style>
+<script src="http://code.jquery.com/jquery-1.9.1.min.js" integrity="sha256-wS9gmOZBqsqWxgIVgA8Y9WcQOa7PgSIX+rPA0VL2rbQ=" crossorigin="anonymous"></script>
+<script src="http://code.jquery.com/jquery-migrate-1.4.1.js"></script>
+<script src="scripts/jquery.lightbox-0.5.pack.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/Camera/1.3.4/scripts/camera.min.js"></script>
+<script type="text/javascript" src="../js/swfobject.js"></script>
+<script type="text/javascript">
+$(document).ready(function(e) {
+    $('#banner').camera({
+		width:'988px',height:'268px',pagination: false,thumbnails: false,time: 2000,rows: 3
+	});
+	$('#gallery a').lightBox({fixedNavigation:true});
+	var fade = function() {
+		setTimeout(function() {
+			var img = $('#myflash img.opaque'), next = img.next().length;
+			img.removeClass('opaque');
+			if (next !== 0) {
+				img.next().addClass('opaque');
+			} else {
+				$('#myflash img:first').addClass('opaque');
+			}
+			fade();
+		},2000);
+	};
+	fade();
+});
+</script>
+
+</head>
+
+<body>
+<!--<div class="tipinfo">
+  <a href="#"><img src="images/tip_1.png"></a>
+  <a href="#" style="margin-top:12px;"><img src="images/tip_2.png"></a>
+</div>-->
+<div id="layout">
+  <div id="header">
+    <span class="phone"><a href="tel:9611099399"><i class="fa fa-phone"></i>&nbsp;&nbsp;9611099399</a></span>
+    <span class="phone" style="left:645px;"><a href="mailto:hello@ezyliving.in&cc=ashokg25@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;hello@ezyliving.in</a></span>
+    <div id="logo_container">
+       <div style="margin-top:27px;margin-left:29px;"><img src="images/logo1.png" width="212" height="53" /></div>
+       <div style="margin:7px 0px 0px 62px; font-family:'Lucida Console', Monaco, monospace;font-size:12px;color:#e0dfdf;font-weight:bold;">affordable reality</div>
+    </div>
+    <div id="home_logo">
+      <a href=""><img src="images/home.png" width="44" height="41" alt="" style="border:0px;" /></a>
+    </div>
+  </div>
+  <div class="mymenu">
+    <ul>
+      <li><a href="index.html">Kitchens</a></li>
+      <li><a href="wardrobes.html">Wardrobes</a></li>
+      <li><a href="about-us.html">About Us</a></li>
+      <li><a href="get-in-touch.html">Get In Touch</a></li>
+      <li><a href="https://db.tt/pk1BD20mJD" target="_blank">Portfolio</a></li>
+      <li><a href="#" onClick="return false">Testimonial</a></li>
+    </ul>
+  </div>
+  <div id="banner">
+    <div data-src="images/kitchen1.jpg"><div class="camera_caption">The text of your caption</div></div>
+    <div data-src="images/kitchen2.jpg"><div class="camera_caption">The text of your caption</div></div>
+    <div data-src="images/kitchen3.jpg"><div class="camera_caption">The text of your caption</div></div>
+  </div>
+  <div id="desc_block">
+     <div id="home_desc">
+       <div style="color:#e1e0e0;font-size:16px;line-height:23px; padding:30px 155px 0px 25px">
+       If you think your kitchen is only for cooking, think again. In most households, the kitchen has become the center of attraction. Regardless of whether your kitchen is large or small, it seems always that this room tends to be the gathering place for women when people visit the home. It’s been said that kitchen upgrades can significantly increase the value of a home.
+       </div>
+     </div>
+     <div id="mypartner">
+        <div style="height:54px;border-bottom:2px #d41d24 solid;margin-left:1px;">
+          <img src="images/partner.png" width="222" height="33" alt="" style="margin:15px 0px 0px 5px;" />
+        </div>
+        <div id="myflash">
+          <img class="opaque" src="images/partner/blum.png">
+          <img src="images/partner/elica.png">
+          <img src="images/partner/ever.png">
+          <img src="images/partner/grass.png">
+          <img src="images/partner/Hafel.png">
+          <img src="images/partner/hettich.png">
+        </div>
+     </div>
+  </div>
+  <div id="kitchen_slider">
+    <div id="gallery">
+      <ul>
+        <li><a href="images/a.jpg"><img src="images/a.jpg" width="186" height="139" alt="" /></a></li>
+        <li><a href="images/b.jpg"><img src="images/b.jpg" width="186" height="139" alt="" /></a></li>
+        <li><a href="images/c.jpg"><img src="images/c.jpg" width="186" height="139" alt="" /></a></li>
+        <li><a href="images/d.jpg"><img src="images/d.jpg" width="186" height="139" alt="" /></a></li>
+        <li><a href="images/e.jpg"><img src="images/e.jpg" width="186" height="139" alt="" /></a></li>
+      </ul>
+	</div>
+  </div>
+  <div id="footer">
+     <div style="float:left;padding:22px 0px 0px 24px;"><a href="#"><img src="images/facebook.png" width="35" height="35" alt="" /></a></div>
+     <div style="float:left; padding:22px 0px 0px 14px"><a href="#"><img src="images/twitter.png" width="35" height="35" alt="" /></a></div>
+     <div style="float:right; margin-right:19px; margin-top:33px;">
+       <span>Copyright © <script type="text/javascript">document.write(new Date().getFullYear());</script></span>
+       <span style="display:inline-block;padding:0px 6px;font-size:12px;">|</span>
+       <span style="cursor:pointer;" onclick="window.location='index.html'">EzyLiving</span>
+     </div>
+  </div>
+</div>
+
+</body>
+</html>
