@@ -1,0 +1,4 @@
+@to-do
+1. Add missing links to facebook and twitter.
+2. Bootstrap light-box.
+3. Display phone number and email in header for small devices. 
