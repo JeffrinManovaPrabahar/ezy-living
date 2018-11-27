@@ -9019,3 +9019,17 @@ body,
     bottom: 0;
     width: 100%;
 }
+
+@media (min-width: 576px) and (max-width: 768px) {
+    .portfolio-img {
+        width: 190px !important;
+        height: 155px !important;
+    }
+}
+
+@media (min-width: 769px) {
+    .portfolio-img {
+        width: 210px !important;
+        height: 150px !important;
+    }
+}
