@@ -8994,6 +8994,10 @@ ul.list-unstyled {
     color: #FFF;
 }
 
+.role {
+    font-size: small;
+}
+
 .message {
     color: #e1e0e0;
 }
