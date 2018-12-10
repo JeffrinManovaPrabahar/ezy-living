@@ -8998,6 +8998,11 @@ ul.list-unstyled {
     font-size: small;
 }
 
+.role,
+.userName {
+    display: table;
+}
+
 .message {
     color: #e1e0e0;
 }
@@ -9036,4 +9041,13 @@ body,
         width: 210px !important;
         height: 150px !important;
     }
+}
+
+.fa-pencil-square-o,
+.fa-trash {
+    cursor: pointer;
+}
+
+#editModal {
+    color: #333;
 }
