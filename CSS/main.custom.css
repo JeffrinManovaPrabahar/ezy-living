@@ -9051,3 +9051,7 @@ body,
 #editModal {
     color: #333;
 }
+
+.modal-content {
+    background-color: #555;
+}

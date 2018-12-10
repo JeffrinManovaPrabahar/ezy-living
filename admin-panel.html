@@ -103,6 +103,7 @@
             </div>
         </nav>
         <div class="container-fluid" style="margin-bottom:67px;">
+            <!-- Trigger the modal with a button -->
             <div class="row no-gutter p-3">
                 <div class="col-3">
                     <img src="./images/userImage.png" alt="" class="img-fluid j-center" style="border-radius: 50%;">
@@ -179,28 +180,62 @@
                     <i class="fa fa-trash p-2" title="Delete"></i>
                 </div>
             </div>
-            <!-- Trigger the modal with a button -->
-            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#editModal">Open Modal</button>
-
+            <div class="row no-gutter p-3 pb-5">
+                <button type="button" class="btn btn-danger w-25 j-table btn-block" data-toggle="modal" data-target="#editModal">
+                    <i class="fa fa-plus"></i>
+                    Add</button>
+            </div>
             <!-- Modal -->
-            <div id="editModal" class="modal fade " role="dialog">
-                <div class="modal-dialog modal-lg">
+            <div id="editModal" class="modal fade" role="dialog">
+                <div class="modal-dialog modal-lg text-light">
 
                     <!-- Modal content-->
                     <div class="modal-content">
-                        <div class="modal-header">
-                            <!-- <h4 class="modal-title">Edit Screen</h4> -->
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <div class="modal-header border-0">
+                            <!-- <h5 class="modal-title">Add</h5> -->
+                            <button type="button" class="close text-light" data-dismiss="modal" title="Close">&times;</button>
                         </div>
                         <div class="modal-body">
-                            <div class="form-group"><label class="control-label col-sm-3">Name</label>
-                                <div class="col-sm-9"><input type="text" class="form-control" id="name" required=""
-                                        data-error="Name is required">
-                                    <div class="help-block with-errors"></div>
+                            <form class="form-horizontal" role="form" id="form" autocomplete="off" novalidate="true">
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-xs-12 text-sm-right">Photo (Optional)</label>
+                                    <div class="col-9 col-xs-12">
+                                        <div class="input-group-btn">
+                                            <input type="file" id="image_file" name="image_file">
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-xs-12 text-sm-right">Name</label>
+                                    <div class="col-sm-9 col-xs-12">
+                                        <input type="text" class="form-control" id="name" required="" data-error="Name is required">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="form-group row"><label class="col-sm-3 col-xs-12 text-sm-right">Position</label>
+                                    <div class="col-sm-9 col-xs-12"><input type="text" class="form-control" id="position"
+                                            required="" data-error="Position is required">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="form-group row"><label class="col-sm-3 col-xs-12 text-sm-right">Short
+                                        Description</label>
+                                    <div class="col-sm-9 col-xs-12">
+                                        <textarea maxlength="280" class="form-control" class="form-control" id="sDescription"
+                                            required="" data-error="Short Description is required"></textarea>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="form-group row"><label class="col-sm-3 col-xs-12 text-sm-right">Long
+                                        Description</label>
+                                    <div class="col-sm-9 col-xs-12">
+                                        <textarea maxlength="500" class="form-control" id="lDescription" required=""
+                                            data-error="Long Description is required"></textarea>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
 
-                            <div class="row no-gutter p-3">
+                                <!-- <div class="row no-gutter p-3">
                                 <div class="col-3 text-right p-2">Photo (Optional)</div>
                                 <div class="col-7 p-2">
                                     <div class="input-group file-caption-main">
@@ -209,36 +244,15 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="row no-gutter p-3">
-                                <div class="col-3 text-right p-2">Name</div>
-                                <div class="col-7 p-2">
-                                    <input type="text" class="form-control" id="empname" required="" data-error="Employee name is required">
-                                </div>
-                            </div>
-                            <div class="row no-gutter p-3">
-                                <div class="col-3 text-right p-2">Position</div>
-                                <div class="col-7 p-2">
-                                    <input type="text" class="form-control" id="empname" required="" data-error="Employee name is required">
-                                </div>
-                            </div>
-                            <div class="row no-gutter p-3">
-                                <div class="col-3 text-right p-2">Short Description</div>
-                                <div class="col-7 p-2">
-                                    <textarea maxlength="200" class="form-control" id="tweet"></textarea>
-                                    <!-- <input type="text" class="form-control" id="empname" required="" data-error="Employee name is required"> -->
-                                </div>
-                            </div>
-                            <div class="row no-gutter p-3">
-                                <div class="col-3 text-right p-2">Long Description</div>
-                                <div class="col-7 p-2">
-                                    <!-- <input type="text" class="form-control" id="empname" required="" data-error="Employee name is required"> -->
-                                    <textarea maxlength="500" class="form-control" id="tweet"></textarea>
-                                </div>
-                            </div>
+                            </div> -->
+                            </form>
                         </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <div class="modal-footer border-0">
+                            <button type="button" class="btn btn-danger w-25" data-dismiss="modal">
+                                <i class="fa fa-plus"></i>
+                                Add
+                            </button>
+                            <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
                         </div>
                     </div>
 
@@ -295,7 +309,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/4.4.9/js/locales/(lang).js"></script>
 </body>
 <script>
-    $("#image_file").fileinput({ 'showUpload': false, 'previewFileType': 'any' });
+    $("#image_file").fileinput({
+        showUpload: false,
+        showCancel: false,
+        dropZoneEnabled: false
+    });
 </script>
 
 </html>
